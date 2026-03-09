@@ -215,6 +215,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: var(--text);
   display: flex;
   flex-direction: column;
+  min-width: 0; /* lets card shrink on narrow viewports */
 }
 .form-card:hover { border-color: var(--accent); }
 .form-card-title {
@@ -230,11 +231,14 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-radius: var(--radius);
   margin-bottom: 1rem;
   border: 1px dashed var(--border);
+  overflow: hidden;
+  min-width: 0;
 }
 .form-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: unset;
+  max-width: 100%;
+  object-fit: cover;
   border-radius: var(--radius);
   display: block;
 }
